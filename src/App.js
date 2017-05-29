@@ -3,6 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      deals: []
+    }
+    fetch('deals.json').then(response => response.json()).then(json => this.setState({ deals: json.deals }));
+  }
   render() {
     return (
       <div className="App">
