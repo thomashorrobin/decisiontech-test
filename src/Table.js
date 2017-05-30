@@ -27,7 +27,7 @@ import './Table.css';
  }
 
  function TVDeal(props) {
-     let channels = props.channels.map((c, i) => <img key={i} src={c.logo}/>);
+     let channels = props.channels.map((c, i) => <img alt="not avalible" key={i} src={c.logo}/>);
      return(<div>{channels}</div>);
  }
 

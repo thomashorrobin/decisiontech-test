@@ -12,3 +12,8 @@
   padding: 20px;
   color: white;
 }
+
+.App-body {
+  display: flex;
+  flex-direction: row;
+}
