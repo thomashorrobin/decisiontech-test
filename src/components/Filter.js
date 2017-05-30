@@ -7,7 +7,7 @@ class Filter extends Component {
         let broadband = document.getElementById('bb').checked;
         let tv = document.getElementById('tv').checked;
         let mobile = document.getElementById('ph').checked;
-        let speed = parseInt(document.getElementById('speed').value);
+        let speed = parseInt(document.getElementById('speed').value, 10)
         this.props.setFilter(new FilterOptions(broadband, tv, mobile, speed));
     }
     render() {

@@ -13,7 +13,7 @@ class FilterOptions {
         }
     }
     speedNotFiltered(){
-        if (this.speed == -1) {
+        if (this.speed === -1) {
             return true;
         } else {
             return false;
