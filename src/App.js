@@ -11,13 +11,15 @@ class App extends Component {
       filter: {
         broadband: false,
         tv: false,
-        mobile: false
+        mobile: false,
+        speed: -1
       }
     }
     fetch('deals.json').then(response => response.json()).then(json => this.setState({ deals: json.deals }));
   }
   setFilter (filter) {
     this.setState({filter});
+    console.log(filter);
   }
   getFilteredDeals(){
     let filter = this.state.filter;
@@ -25,7 +27,11 @@ class App extends Component {
       if(!filter.broadband && !filter.mobile && !filter.tv){
         return true;
       }
-      return (filter.broadband === d.productTypes.includes('Broadband')) && (filter.mobile === d.productTypes.includes('Mobile')) && (filter.tv === d.productTypes.includes('TV'));
+      let broadband = filter.broadband === d.productTypes.includes('Broadband');
+      let mobile = filter.mobile === d.productTypes.includes('Mobile');
+      let tv = filter.tv === d.productTypes.includes('TV');
+      let speed = filter.speed == -1 
+      return broadband && mobile && tv;
     });
   }
   render() {
