@@ -22,10 +22,11 @@ class App extends Component {
   getFilteredDeals(){
     let filter = this.state.filter;
     return this.state.deals.filter(d => { 
-      let bb = filter.broadband && d.productTypes.includes('Broadband');
-      let tv = filter.tv && d.productTypes.includes('TV');
-      let ph = filter.mobile && d.productTypes.includes('Phone');
-      return bb || tv || ph;
+      if(!filter.broadband && !filter.mobile && !filter.tv){
+        return true;
+      }
+      // return (filter.broadband ? d.productTypes.includes('Broadband') : true) && (filter.tv ? d.productTypes.includes('TV') : true) && (filter.mobile ? d.productTypes.includes('Mobile') : true);
+      return (filter.broadband === d.productTypes.includes('Broadband')) && (filter.mobile === d.productTypes.includes('Mobile')) && (filter.tv === d.productTypes.includes('TV'));
     });
   }
   render() {
