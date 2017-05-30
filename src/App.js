@@ -25,7 +25,6 @@ class App extends Component {
       let bb = filter.broadband && d.productTypes.includes('Broadband');
       let tv = filter.tv && d.productTypes.includes('TV');
       let ph = filter.mobile && d.productTypes.includes('Phone');
-      // console.log(bb ? 'bb, ' : '', tv ? 'tv, ' : '', ph ? 'ph, ' : '');
       return bb || tv || ph;
     });
   }
