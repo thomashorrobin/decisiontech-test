@@ -25,7 +25,6 @@ class App extends Component {
       if(!filter.broadband && !filter.mobile && !filter.tv){
         return true;
       }
-      // return (filter.broadband ? d.productTypes.includes('Broadband') : true) && (filter.tv ? d.productTypes.includes('TV') : true) && (filter.mobile ? d.productTypes.includes('Mobile') : true);
       return (filter.broadband === d.productTypes.includes('Broadband')) && (filter.mobile === d.productTypes.includes('Mobile')) && (filter.tv === d.productTypes.includes('TV'));
     });
   }
