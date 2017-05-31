@@ -48,6 +48,6 @@ import React from 'react';
  }
 
  function TVDeal(props) {
-     let channels = props.channels.map((c, i) => <img alt="not avalible" key={i} src={c.logo}/>);
+     let channels = props.channels.map((c, i) => <span><img alt="not avalible" key={i} src={c.logo}/><br /></span>);
      return(<div>{channels}</div>);
  }
