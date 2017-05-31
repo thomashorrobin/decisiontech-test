@@ -1,4 +1,5 @@
 import React from 'react';
+import './Table.css';
 
  export default function Table(props){
     let deals = props.deals.map((d, i) => <TableRecord key={i} deal={d} />) ;
