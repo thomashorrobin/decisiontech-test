@@ -20,7 +20,12 @@ class App extends Component {
   }
   showFilterMenu() {
     let filterBody = document.getElementsByClassName('filter-body')[0];
-    filterBody.style.visibility = "visible";
+    let visible = filterBody.style.visibility;
+    if (visible == "visible") {
+      filterBody.style.visibility = "hidden";
+    } else {
+      filterBody.style.visibility = "visible";
+    }
   }
   render() {
     return (
