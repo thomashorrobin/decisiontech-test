@@ -21,7 +21,7 @@ class App extends Component {
   showFilterMenu() {
     let filterBody = document.getElementsByClassName('filter-body')[0];
     let visible = filterBody.style.visibility;
-    if (visible == "visible") {
+    if (visible === "visible") {
       filterBody.style.visibility = "hidden";
     } else {
       filterBody.style.visibility = "visible";
