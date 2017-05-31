@@ -1,9 +1,19 @@
 .filter-body {
-    background-color: #dedede;
+    background-color: #333;
     width: 300px;
     margin-bottom: 0px;
+    visibility: hidden;
+    color: white;
 }
 
 li {
     text-align: left;
+}
+
+@media only screen and (min-width: 800px) {
+  .filter-body {
+    visibility: visible;
+    background-color: #dedede;
+    color: black;
+  }
 }
