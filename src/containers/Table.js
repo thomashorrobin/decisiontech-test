@@ -1,4 +1,5 @@
 import React from 'react';
+import './Table.css';
 
  export default function Table(props){
     let deals = props.deals.map((d, i) => <TableRecord key={i} deal={d} />) ;
@@ -48,6 +49,6 @@ import React from 'react';
  }
 
  function TVDeal(props) {
-     let channels = props.channels.map((c, i) => <span><img alt="not avalible" key={i} src={c.logo}/><br /></span>);
+     let channels = props.channels.map((c, i) => <div key={i}><img alt="not avalible" src={c.logo}/></div>);
      return(<div>{channels}</div>);
  }

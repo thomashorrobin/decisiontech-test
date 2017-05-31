@@ -2,8 +2,13 @@
   text-align: center;
 }
 
+.burgermenu {
+  float: right;
+}
+
 .App-logo {
   height: 80px;
+  float: left;
 }
 
 .App-header {
@@ -16,4 +21,10 @@
 .App-body {
   display: flex;
   flex-direction: row;
+}
+
+@media only screen and (min-width: 800px) {
+  .burgermenu {
+    visibility: hidden;
+  }
 }

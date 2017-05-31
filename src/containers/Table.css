@@ -1,0 +1,18 @@
+thead {
+    visibility: hidden;
+}
+
+tr {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 800px) {
+  thead {
+      visibility: visible;
+  }
+  tr {
+      display: table-row;
+    flex-direction: row;
+  }
+}
